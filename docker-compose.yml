@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  gameapptestauto:
+    image: vanemm/gametest123:latest
+    build: .
+    container_name: gametestcontainer
+    ports: 
+      - "80:3000"
+    envrionment: 
+    - PORT=3000
+    volumes:
+      - ./:/app
+    command: ["node", "app.js"]
+    
