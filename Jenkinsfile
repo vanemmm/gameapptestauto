@@ -27,8 +27,7 @@ pipeline {
             }
             steps {
                 script {
-                    // Build Docker image using Jenkins Docker
-Pipeline API
+                    // Build Docker image using Jenkins Docker Pipeline API
                     echo "Building Docker image ${IMAGE_NAME}..."
                     app = docker.build("${IMAGE_NAME}")
                     app.tag("latest")
