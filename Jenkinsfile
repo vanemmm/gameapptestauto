@@ -74,8 +74,8 @@ pipeline
             agent { label 'agent001'}
             
             steps
-            echo 'starting deployment using docker-compose...'
             {
+                echo 'starting deployment using docker-compose...'
                 script
                 {
                     dir ("${WORKSPACE}")
@@ -87,9 +87,10 @@ pipeline
                         '''
                     }
                 }
+                echo 'Deployment completed successfully!'
                 
             }
-            echo 'Starting deployment using docker-compose...'
+
         }
 
     }
