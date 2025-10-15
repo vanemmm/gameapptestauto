@@ -87,7 +87,7 @@ pipeline
                         '''
                     }
                 }
-                echo 'Deployment completed successfully!'
+                echo 'Deployment completed successfully'
                 
             }
 
