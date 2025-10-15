@@ -6,7 +6,7 @@ services:
     container_name: gametestcontainer
     ports: 
       - "80:3000"
-    envrinoment: 
+    environment: 
     - PORT=3000
     volumes:
       - ./:/app
