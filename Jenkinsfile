@@ -31,6 +31,22 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+                    agent {
+                        label 'agent 001'
+                    }
+                    steps {
+                        script {
+                            def scannerHome = tool 'sonarqube-scanner'
+                            withSonarQubeEnv('sonarqube-installations') {
+                                sh "${scannerHome}/bin/sonar-scanner \
+                                    -Dsonar.projectKey=gameapp \
+                                    -Dsonar.sources=."
+                            }
+                        }
+                    }
+                }
+
       stage('BUILD-AND-TAG') {
             agent {
                 label 'agent001'
