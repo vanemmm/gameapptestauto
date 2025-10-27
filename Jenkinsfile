@@ -33,7 +33,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
                     agent {
-                        label 'agent 001'
+                        label 'agent001'
                     }
                     steps {
                         script {
